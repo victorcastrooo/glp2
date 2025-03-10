@@ -1,0 +1,333 @@
+
+│   │
+│   ├── Controllers/                  # Controladores da aplicação
+│   │   ├── Admin/
+│   │   │   ├── DashboardController.php
+│   │   │   ├── ProductController.php
+│   │   │   ├── StockController.php
+│   │   │   ├── VendorController.php
+│   │   │   ├── DoctorVendorRelationController.php
+
+│   │   │   ├── OrderController.php
+│   │   │   ├── PaymentController.php
+│   │   │   ├── DocumentController.php
+│   │   │   ├── ReportController.php
+│   │   │   └── SettingsController.php
+│   │   │
+│   │   ├── Vendor/
+│   │   │   ├── DashboardController.php
+│   │   │   ├── LinkController.php
+│   │   │   ├── SalesController.php
+│   │   │   ├── DoctorController.php
+│   │   │   ├── CommissionController.php
+│   │   │   └── ProfileController.php
+│   │   │
+│   │   ├── Customer/
+│   │   │   ├── AccountController.php
+│   │   │   ├── CartController.php
+│   │   │   ├── CheckoutController.php
+│   │   │   ├── OrderController.php
+│   │   │   ├── PrescriptionController.php
+│   │   │   ├── PaymentController.php
+│   │   │   └── DocumentController.php
+│   │   │
+│   │   ├── AuthController.php
+│   │   ├── HomeController.php
+│   │   ├── ProductController.php
+│   │   ├── CartController.php
+│   │   ├── CheckoutController.php
+│   │   └── ReferralController.php
+│   │
+│   ├── Models/                       # Modelos da aplicação
+│   │   ├── UserModel.php
+│   │   ├── AdminModel.php
+│   │   ├── VendorModel.php
+│   │   ├── CustomerModel.php
+│   │   ├── DoctorModel.php
+│   │   ├── DoctorVendorModel.php
+│   │   ├── ProductModel.php
+│   │   ├── CategoryModel.php
+│   │   ├── OrderModel.php
+│   │   ├── OrderItemModel.php
+│   │   ├── CartModel.php
+│   │   ├── DocumentModel.php
+│   │   ├── PaymentModel.php
+│   │   ├── StockModel.php
+│   │   ├── CommissionModel.php
+│   │   ├── InvoiceModel.php
+│   │   └── ShippingModel.php
+│   │
+│   ├── Views/                        # Arquivos de visualização
+│   │   ├── admin/
+│   │   │   ├── dashboard.php
+│   │   │   ├── products/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── create.php
+│   │   │   │   ├── edit.php
+│   │   │   │   └── categories.php
+│   │   │   ├── stock/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── update.php
+│   │   │   │   └── history.php
+│   │   │   ├── vendors/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── create.php
+│   │   │   │   ├── edit.php
+│   │   │   │   └── details.php
+│   │   │   ├── doctors/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── create.php
+│   │   │   │   ├── edit.php
+│   │   │   │   └── vendor_relationships.php
+│   │   │   ├── customers/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── details.php
+│   │   │   │   └── documents.php
+│   │   │   ├── orders/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── details.php
+│   │   │   │   └── status.php
+│   │   │   ├── documents/
+│   │   │   │   ├── anvisa_approvals.php
+│   │   │   │   ├── approve.php
+│   │   │   │   ├── prescriptions.php
+│   │   │   │   └── verify_prescription.php
+│   │   │   ├── payments/
+│   │   │   │   ├── pending.php
+│   │   │   │   ├── approved.php
+│   │   │   │   └── rejected.php
+│   │   │   ├── reports/
+│   │   │   │   ├── sales.php
+│   │   │   │   ├── commissions.php
+│   │   │   │   ├── invoices.php
+│   │   │   │   └── stock.php
+│   │   │   └── settings/
+│   │   │       ├── general.php
+│   │   │       ├── payment.php
+│   │   │       ├── shipping.php
+│   │   │       └── invoice.php
+│   │   │
+│   │   ├── vendor/
+│   │   │   ├── dashboard.php
+│   │   │   ├── links/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── generate.php
+│   │   │   │   └── stats.php
+│   │   │   ├── sales/
+│   │   │   │   ├── index.php
+│   │   │   │   └── details.php
+│   │   │   ├── doctors/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── register.php
+│   │   │   │   └── commission_rates.php
+│   │   │   ├── commissions/
+│   │   │   │   ├── index.php
+│   │   │   │   └── details.php
+│   │   │   └── profile/
+│   │   │       ├── index.php
+│   │   │       └── edit.php
+│   │   │
+│   │   ├── customer/
+│   │   │   ├── account/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── edit.php
+│   │   │   │   └── addresses.php
+│   │   │   ├── documents/
+│   │   │   │   ├── index.php
+│   │   │   │   └── upload.php
+│   │   │   ├── orders/
+│   │   │   │   ├── index.php
+│   │   │   │   └── details.php
+│   │   │   └── prescriptions/
+│   │   │       ├── index.php
+│   │   │       └── upload.php
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   ├── register.php
+│   │   │   ├── forgot_password.php
+│   │   │   └── reset_password.php
+│   │   │
+│   │   ├── home/
+│   │   │   ├── index.php
+│   │   │   ├── about.php
+│   │   │   ├── contact.php
+│   │   │   └── terms.php
+│   │   │
+│   │   ├── products/
+│   │   │   ├── index.php
+│   │   │   ├── details.php
+│   │   │   └── category.php
+│   │   │
+│   │   ├── cart/
+│   │   │   ├── index.php
+│   │   │   └── mini_cart.php
+│   │   │
+│   │   ├── checkout/
+│   │   │   ├── index.php
+│   │   │   ├── shipping.php
+│   │   │   ├── prescription.php
+│   │   │   ├── payment.php
+│   │   │   └── confirmation.php
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── main.php
+│   │   │   ├── admin.php
+│   │   │   ├── vendor.php
+│   │   │   └── customer.php
+│   │   │
+│   │   └── components/
+│   │       ├── header.php
+│   │       ├── footer.php
+│   │       ├── sidebar.php
+│   │       ├── product_card.php
+│   │       ├── pagination.php
+│   │       ├── alerts.php
+│   │       └── forms/
+│   │           ├── product.php
+│   │           ├── user.php
+│   │           ├── document.php
+│   │           └── address.php
+│   │
+│   ├── Services/                     # Serviços da aplicação
+│   │   ├── AuthService.php
+│   │   ├── EmailService.php
+│   │   ├── PaymentService.php        # Integração com Mercado Pago
+│   │   ├── ShippingService.php       # Cálculo de fretes
+│   │   ├── InvoiceService.php        # Integração com NFE.io
+│   │   ├── DocumentVerificationService.php
+│   │   ├── CommissionService.php
+│   │   ├── PrescriptionService.php
+│   │   ├── StockService.php
+│   │   └── LogService.php
+│   │
+│   ├── Helpers/                      # Funções auxiliares
+│   │   ├── AuthHelper.php
+│   │   ├── SecurityHelper.php
+│   │   ├── ValidationHelper.php
+│   │   ├── FileHelper.php
+│   │   ├── CurrencyHelper.php
+│   │   └── DateHelper.php
+│   │
+│   ├── Libraries/                    # Bibliotecas do sistema
+│   │   ├── Database.php
+│   │   ├── Session.php
+│   │   ├── Email.php
+│   │   ├── FileUpload.php
+│   │   ├── PDF.php                   # Para geração de relatórios e documentos
+│   │   ├── MercadoPago.php           # Integração com Mercado Pago
+│   │   ├── NFEio.php                 # Integração com NFE.io
+│   │   └── ShippingCalculator.php    # Cálculo de fretes
+│   │
+│   └── Middleware/                   # Middleware para proteção de rotas
+│       ├── AuthMiddleware.php
+│       ├── AdminMiddleware.php
+│       ├── VendorMiddleware.php
+│       ├── CustomerMiddleware.php
+│       ├── CsrfMiddleware.php
+│       └── LogMiddleware.php
+│
+├── public/                           # Arquivos públicos
+│   ├── index.php                     # Ponto de entrada da aplicação
+│   ├── .htaccess                     # Configurações do Apache
+│   ├── favicon.ico
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   │
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── main.css              # Estilos principais
+│   │   │   ├── admin.css
+│   │   │   ├── vendor.css
+│   │   │   ├── customer.css
+│   │   │   └── responsive.css
+│   │   │
+│   │   ├── js/
+│   │   │   ├── main.js
+│   │   │   ├── validation.js
+│   │   │   ├── cart.js
+│   │   │   ├── checkout.js
+│   │   │   ├── payment.js
+│   │   │   ├── shipping.js
+│   │   │   ├── upload.js
+│   │   │   │
+│   │   │   ├── admin/
+│   │   │   │   ├── dashboard.js
+│   │   │   │   ├── products.js
+│   │   │   │   ├── stock.js
+│   │   │   │   ├── vendors.js
+│   │   │   │   ├── doctors.js
+│   │   │   │   ├── customers.js
+│   │   │   │   ├── orders.js
+│   │   │   │   ├── documents.js
+│   │   │   │   └── reports.js
+│   │   │   │
+│   │   │   ├── vendor/
+│   │   │   │   ├── dashboard.js
+│   │   │   │   ├── links.js
+│   │   │   │   ├── sales.js
+│   │   │   │   ├── doctors.js
+│   │   │   │   └── commissions.js
+│   │   │   │
+│   │   │   └── customer/
+│   │   │       ├── account.js
+│   │   │       ├── orders.js
+│   │   │       └── documents.js
+│   │   │
+│   │   ├── img/
+│   │   │   ├── logo.png
+│   │   │   ├── products/
+│   │   │   ├── banners/
+│   │   │   └── icons/
+│   │   │
+│   │   ├── fonts/
+│   │   │
+│   │   └── libs/                     # Bibliotecas de terceiros
+│   │       ├── bootstrap/
+│   │       ├── jquery/
+│   │       ├── chart.js/
+│   │       ├── dropzone/
+│   │       └── sweetalert/
+│   │
+│   └── uploads/                      # Uploads armazenados de forma segura
+│       ├── products/                 # Imagens de produtos
+│       ├── documents/                # Documentos ANVISA (acesso protegido)
+│       └── prescriptions/            # Receitas médicas (acesso protegido)
+│
+├── database/                         # Arquivos do banco de dados
+│   ├── migrations/                   # Scripts de migração
+│   │   ├── 001_create_users_table.php
+│   │   ├── 002_create_products_table.php
+│   │   ├── 003_create_orders_table.php
+│   │   └── ...
+│   │
+│   └── seeds/                        # Dados iniciais
+│       ├── AdminSeeder.php
+│       ├── CategorySeeder.php
+│       └── ProductSeeder.php
+│
+├── tests/                            # Testes automatizados
+│   ├── Unit/
+│   │   ├── Models/
+│   │   ├── Controllers/
+│   │   └── Services/
+│   │
+│   └── Integration/
+│       ├── Auth/
+│       ├── Admin/
+│       ├── Vendor/
+│       └── Customer/
+│
+├── vendor/                           # Dependências do Composer
+│
+├── logs/                             # Logs da aplicação
+│   ├── error.log
+│   ├── access.log
+│   └── payment.log
+│
+├── .env                              # Variáveis de ambiente (sensíveis)
+├── .env.example                      # Exemplo de variáveis de ambiente
+├── .gitignore                        # Arquivos ignorados pelo Git
+├── composer.json                     # Dependências do projeto
+├── package.json                      # Dependências do frontend
+└── README.md                         # Documentação do projeto
